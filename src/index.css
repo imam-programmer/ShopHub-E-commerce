@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.container{
+    @apply w-304 h-10  mx-auto 
+}
+@theme{
+    --font-inter: "Inter", sans-serif;
+}
+.nav-li{
+    @apply font-inter text-[#374151] leading-6 font-normal text-base
+}
