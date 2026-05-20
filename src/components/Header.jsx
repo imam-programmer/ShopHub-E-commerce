@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <header >
+      <header className="mb-6.5">
         <div className="container">
           <nav className="flex justify-between items-center h-16.25">
             <div className="flex items-center gap-[31.52px]">

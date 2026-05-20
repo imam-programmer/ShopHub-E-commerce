@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .container{
-    @apply w-304 h-10  mx-auto 
+    @apply max-w-304 h-10  mx-auto 
 }
 @theme{
     --font-inter: "Inter", sans-serif;
@@ -14,4 +14,10 @@
 }
 .cart-span{
     @apply absolute text-[12px] font-normal font-inter  text-[#FFFFFF] rounded-[50%] p-1.5 bg-[#EF4444] -top-5 -right-2.5
+}
+/* ===============header part end============================= */
+
+/* =================Banner start================= */
+.banner-btn{
+    @apply font-inter text-[16px] font-semibold text-[#2563EB] bg-[#E5E7EB] rounded-lg pt-3.5 pb-3.5 pr-[26.06px] pl-[26.06px]
 }
