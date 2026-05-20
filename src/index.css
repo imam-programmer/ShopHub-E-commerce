@@ -9,3 +9,6 @@
 .nav-li{
     @apply font-inter text-[#374151] leading-6 font-normal text-base
 }
+.search-input{
+    @apply w-full font-normal text-base border border-[#ADAEBC] pl-10 pr-10 box-border pt-2.25 pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
+}
