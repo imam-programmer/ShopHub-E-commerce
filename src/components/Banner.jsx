@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <section className='h-125 bg-linear-to-r from-[#2563EB] to-[#1E40AF]'>
+    <section className='h-125 bg-linear-to-r from-[#2563EB] to-[#1E40AF]' >
         <div className="container">
           <div className="banner-container flex justify-between items-center pt-22.5">
             <div className="banner-text">
