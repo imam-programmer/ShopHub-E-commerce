@@ -12,3 +12,6 @@
 .search-input{
     @apply w-full font-normal text-base border border-[#ADAEBC] pl-10 pr-10 box-border pt-2.25 pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
 }
+.cart-span{
+    @apply absolute text-[12px] font-normal font-inter  text-[#FFFFFF] rounded-[50%] p-1.5 bg-[#EF4444] -top-5 -right-2.5
+}

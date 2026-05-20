@@ -21,8 +21,8 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-4">
 
-            <i class="fa-solid fa-cart-shopping text-[24px]" ></i>
-            <i class="fa-solid fa-circle-user text-[24px]"></i>
+            <i class="fa-solid fa-cart-shopping text-[24px] relative" ><span className="cart-span" >0</span></i>
+            <i class="fa-solid fa-circle-user text-[24px] "></i>
             </div>
           </nav>
         </div>
