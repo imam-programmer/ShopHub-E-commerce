@@ -4,6 +4,7 @@ import Banner from './components/Banner'
 import Category from './components/Category'
 import Featured from './components/Featured'
 import Deal from './components/Deal'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
    <Category/>
    <Featured/>
    <Deal/>
+   <Footer/>
     </>
   )
 }
