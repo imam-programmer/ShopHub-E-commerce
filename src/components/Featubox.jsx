@@ -2,7 +2,7 @@ import React from 'react'
 
 const Featubox = (props) => {
   return (
-    <div className='lg:h-86 lg:w-71.5 xs:p-4 md:p-4 px-2 py-3  box-border rounded-lg  shadow-box bg-[#FFFFFF]'>
+    <div className='xl:h-86 xl:w-71.5 xs:p-4 md:p-4 px-2 py-3  box-border rounded-lg  shadow-box bg-[#FFFFFF]'>
 <img src={props.img} alt="" className='block  mx-auto'/>
 <h4 className='font-inter text-[16px] font-semibold text-[#111827] mt-4.5 mb-1.5'>{props.title}</h4>
 <p className='font-inter font-normal text-[14px] text-[#4B5563] mb-2.75'>{props.p}</p>
