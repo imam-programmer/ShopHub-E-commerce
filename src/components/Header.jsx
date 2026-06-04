@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <header className="mb-6.5 pt-2">
+      <header className="mb-1 pt-2 relative">
         <div className="container">
           <nav className="flex justify-between items-center h-16.25 flex-wrap ">
             <div className="flex items-center gap-[31.52px]">
@@ -22,16 +22,16 @@ const Header = () => {
 
 
 
-            <div className="md:hidden flex items-center relative justify-between w-full mt-3 ">
+            <div className="md:hidden flex items-center  justify-between w-full mt-3 ">
               <label htmlFor="baricon">
               <i class="fa-solid fa-bars text-xl"></i>
               </label>
               <input type="checkbox" id="baricon" className="hidden"/>
-                <ul className=" bg-blue-400 left-[-120%] w-full p-3 absolute top-6 ul">
-              <li className=" text-[14px] font-inter text-[#374151] mb-1">Home</li>
-              <li className=" text-[14px] font-inter text-[#374151] mb-1">Categories</li>
-              <li className=" text-[14px] font-inter text-[#374151] mb-1">About</li>
-              <li className=" text-[14px] font-inter text-[#374151]">Deals</li>
+                <ul className=" bg-[#0379c1] left-[-120%] w-full p-4 absolute top-19.5 ul">
+              <li className=" text-[14px] font-inter text-[white] mb-1">Home</li>
+              <li className=" text-[14px] font-inter text-[white] mb-1">Categories</li>
+              <li className=" text-[14px] font-inter text-[white] mb-1">About</li>
+              <li className=" text-[14px] font-inter text-[white]">Deals</li>
             </ul>
             <div className="flex items-center gap-4 ">
 
