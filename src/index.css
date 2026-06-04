@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .container{
-    @apply max-w-304 h-10  mx-auto 
+    @apply max-w-304 h-10  mx-auto px-3 md:px-0
 }
 @theme{
     --font-inter: "Inter", sans-serif;
@@ -10,7 +10,7 @@
     @apply font-inter text-[#374151] leading-6 font-normal text-base
 }
 .search-input{
-    @apply w-full font-normal text-base border border-[#ADAEBC] pl-10 pr-10 box-border pt-2.25 pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
+    @apply w-full font-normal md:text-base border text-[14px]  border-[#ADAEBC] px-5 py-0.5 md:pl-10 md:pr-10 box-border md:pt-2.25 md:pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
 }
 .cart-span{
     @apply absolute text-[12px] font-normal font-inter  text-[#FFFFFF] rounded-[50%] p-1.5 bg-[#EF4444] -top-5 -right-2.5
