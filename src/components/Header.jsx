@@ -27,11 +27,11 @@ const Header = () => {
               <i class="fa-solid fa-bars text-xl"></i>
               </label>
               <input type="checkbox" id="baricon" className="hidden"/>
-                <ul className=" bg-[#0379c1] left-[-120%] w-full h-screen p-4 absolute top-19.5 ul">
-              <li className=" text-[14px] font-inter text-[white] mb-1">Home</li>
-              <li className=" text-[14px] font-inter text-[white] mb-1">Categories</li>
-              <li className=" text-[14px] font-inter text-[white] mb-1">About</li>
-              <li className=" text-[14px] font-inter text-[white]">Deals</li>
+                <ul className=" bg-[#0379c1] left-[-120%] w-full h-screen p-4 absolute top-17.5 ul text-center">
+              <li className=" font-inter text-[white] mb-4">Home</li>
+              <li className=" font-inter text-[white] mb-4">Categories</li>
+              <li className=" font-inter text-[white] mb-4">About</li>
+              <li className=" font-inter text-[white]">Deals</li>
             </ul>
             <div className="flex items-center gap-4 ">
 
