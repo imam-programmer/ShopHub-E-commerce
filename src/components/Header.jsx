@@ -15,7 +15,7 @@ const Header = () => {
               <li className="nav-li">Deals</li>
             </ul>
             </div>
-            <div className=" lg:w-lg relative w-[60%] xs:w-[70%] md:w-[40%]">
+            <div className=" xl:w-lg relative w-[60%] xs:w-[70%] md:w-[40%]">
               <i class="fa-solid fa-magnifying-glass absolute lg:left-3 top-4/8 text-[#9CA3AF]  translate-y-[-50%] lg:text-base text-[12px] left-1"></i>
               <input type="text" placeholder="Search products..." className="search-input"  />
             </div>
