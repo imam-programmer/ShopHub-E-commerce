@@ -3,7 +3,7 @@ import Dealbox from './Dealbox'
 
 const Deal = () => {
   return (
-    <section className='md:pt-16  pt-5 h-91'>
+    <section className='md:pt-16  pt-5 md:h-91 pb-10 md:pb-0'>
       <div className="container">
       <h2 className='md:text-[30px] text-2xl leading-9 font-inter font-bold text-[#111827] text-center mb-8'>Today's Deals</h2>
       <div className='flex md:justify-between gap-2.5 justify-center flex-wrap sm:flex-nowrap'>

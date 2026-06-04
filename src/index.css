@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 .container{
-    @apply max-w-304 mx-auto px-3 md:px-0 
+    @apply max-w-304 mx-auto px-3 lg:px-0 
 }
 @theme{
     --font-inter: "Inter", sans-serif;
 }
 .nav-li{
-    @apply font-inter text-[#374151] leading-6 font-normal text-base
+    @apply font-inter text-[#374151] leading-6 font-normal lg:text-base md:text-[14px]
 }
 .search-input{
-    @apply w-full font-normal md:text-base border text-[14px]  border-[#ADAEBC] px-5 py-0.5 md:pl-10 md:pr-10 box-border md:pt-2.25 md:pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
+    @apply w-full font-normal lg:text-base border text-[14px]  border-[#ADAEBC] px-5 py-0.5 md:py-1 lg:pl-10 lg:pr-10 box-border lg:pt-2.25 lg:pb-2.25 placeholder:leading-6 leading-6 placeholder:text-[#ADAEBC] rounded-lg
 }
 .cart-span{
-    @apply absolute text-[12px] font-normal font-inter  text-[#FFFFFF] rounded-[50%] p-1.5 bg-[#EF4444] -top-5 -right-2.5
+    @apply absolute text-[12px] font-normal font-inter  text-[#FFFFFF] rounded-[50%] py-0.5 px-1 lg:p-1.5 bg-[#EF4444] md:-top-3 lg:-top-5 -right-2.5
 }
 /* ===============header part end============================= */
 
@@ -45,4 +45,5 @@
 /* ==================heru end===================== */
 @theme {
   --breakpoint-xs: 30rem;
+  --breakpoint-xxs: 35.6rem;
 }

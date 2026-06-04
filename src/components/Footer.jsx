@@ -5,9 +5,9 @@ const Footer = () => {
   const footer1li = ["Home", "Categories", "Deals", "About Us"];
   const footer2li = ["Contact Us", "Shipping Info", "Returns", "FAQ"];
   return (
-    <section className="bg-[#111827] h-86.25 pt-12">
+    <section className="bg-[#111827] md:h-86.25 pt-12">
       <div className="container">
-        <div className="flex justify-between">
+        <div className="flex flex-wrap gap-10 justify-center  md:justify-between">
           <div>
             <h2 className="font-inter font-bold text-[20px] leading-7 text-[#FFFFFF] mb-4">
               ShopHub
@@ -53,9 +53,9 @@ const Footer = () => {
             <p className="font-inter text-[16px] font-light leading-6 text-[#9CA3AF] mb-4">
               Subscribe for updates and deals
             </p>
-            <div className="w-93.75 bg-[#E5E7EB] relative rounded-lg overflow-hidden">
-              <label htmlFor="email" className="text-[16px] font-inter font-normal text-[#FFFFFF] absolute right-0 leading-10 w-[109.34px] pl-5 bg-[#3B82F6] h-10">Subscribe</label>
-              <input type="email" placeholder="Your email" className="outline w-full font-inter pl-4 pb-2 pt-2 text-[16px] font-light leading-6  placeholder:text-[#ADAEBC]" />
+            <div className="max-w-93.75 bg-[#E5E7EB] relative rounded-lg overflow-hidden">
+              <label htmlFor="email" className="md:text-[16px] text-[14px] font-inter font-normal text-[#FFFFFF] absolute right-0 py-1.5 px-1 md:leading-10 md:w-[109.34px] md:pl-5 bg-[#3B82F6] md:h-10">Subscribe</label>
+              <input type="email" placeholder="Your email" className="outline w-full font-inter pl-4 py-1 md:py-2 text-[14px] md:text-[16px] font-light leading-6  placeholder:text-[#ADAEBC] " />
             </div>
           </div>
          
