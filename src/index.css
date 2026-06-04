@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .container{
-    @apply max-w-304 h-10  mx-auto px-3 md:px-0
+    @apply max-w-304 h-10  mx-auto px-3 md:px-0 
 }
 @theme{
     --font-inter: "Inter", sans-serif;
@@ -27,4 +27,13 @@
 
 @theme {
   --shadow-box: 0 0px 2px rgba(0,0,0,0.1); 
+}
+
+/* ===============responsive start============== */
+#baricon:checked~ul{
+    left: 0;
+    transition: 0.5s;
+}
+.ul{
+    transition:0.5s
 }
