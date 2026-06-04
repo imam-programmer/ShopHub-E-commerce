@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <header className="mb-1 lg:pt-2 relative">
+      <header className="mb-1 mt-2 md:mt-0 lg:pt-2 relative">
         <div className="container">
           <nav className="flex justify-between items-center h-16.25 flex-wrap md:flex-nowrap">
             <div className="flex items-center lg:gap-[31.52px] md:gap-6">

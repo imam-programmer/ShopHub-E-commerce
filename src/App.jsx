@@ -11,7 +11,7 @@ const App = () => {
     <>
    <Header/>
    <Banner/>
-   {/* <Category/> */}
+   <Category/>
    {/* <Featured/> */}
    {/* <Deal/> */}
    {/* <Footer/> */}
