@@ -16,7 +16,7 @@ const Header = () => {
             </ul>
             </div>
             <div className=" xl:w-lg relative w-[60%] xs:w-[70%] md:w-[40%]">
-              <i class="fa-solid fa-magnifying-glass absolute lg:left-3 top-4/8 text-[#9CA3AF]  translate-y-[-50%] lg:text-base text-[12px] left-1"></i>
+              <i className="fa-solid fa-magnifying-glass absolute lg:left-3 top-4/8 text-[#9CA3AF]  translate-y-[-50%] lg:text-base text-[12px] left-1"></i>
               <input type="text" placeholder="Search products..." className="search-input"  />
             </div>
 
@@ -24,7 +24,7 @@ const Header = () => {
 
             <div className="md:hidden flex items-center  justify-between w-full mt-3 ">
               <label htmlFor="baricon">
-              <i class="fa-solid fa-bars text-xl"></i>
+              <i className="fa-solid fa-bars text-xl"></i>
               </label>
               <input type="checkbox" id="baricon" className="hidden"/>
                 <ul className=" bg-[#0379c1] left-[-120%] w-full h-screen p-4 absolute top-17.5 ul text-center">
@@ -43,8 +43,8 @@ const Header = () => {
 
             <div className="md:flex items-center gap-4 hidden">
 
-            <i class="fa-solid fa-cart-shopping lg:text-[24px] relative" ><span className="cart-span" >0</span></i>
-            <i class="fa-solid fa-circle-user lg:text-[24px]  "></i>
+            <i className="fa-solid fa-cart-shopping lg:text-[24px] relative" ><span className="cart-span" >0</span></i>
+            <i className="fa-solid fa-circle-user lg:text-[24px]  "></i>
             </div>
           </nav>
         </div>
