@@ -10,7 +10,7 @@ let data=fetch('https://dummyjson.com/products')
   setProducts(data.products)
 });
   }, [])
-  console.log(products)
+
 
   
   return (
@@ -23,7 +23,7 @@ let data=fetch('https://dummyjson.com/products')
             <div className='grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2  gap-4 xl:gap-4 md:gap-2 justify-between'>
            {
             products.map((item)=>{
-              return <Featubox title={item.title} img={item.thumbnail} p={item.description} price={item.price}/>
+              return <Featubox key={item.id} id={item.id} title={item.title} img={item.thumbnail} p={item.description} price={item.price}/>
             })
            }   
             </div>

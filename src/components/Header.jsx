@@ -35,8 +35,8 @@ const Header = () => {
             </ul>
             <div className="flex items-center gap-4 ">
 
-            <i class="fa-solid fa-cart-shopping text-[19px] relative" ><span className="absolute -top-3 text-[10px] text-white bg-[#EF4444] -right-2.5 py-1 px-1.5 rounded-full" >0</span></i>
-            <i class="fa-solid fa-circle-user text-[19px] "></i>
+            <i className="fa-solid fa-cart-shopping text-[19px] relative" ><span className="absolute -top-3 text-[10px] text-white bg-[#EF4444] -right-2.5 py-1 px-1.5 rounded-full" >0</span></i>
+            <i className="fa-solid fa-circle-user text-[19px] "></i>
             </div>
             </div>
 

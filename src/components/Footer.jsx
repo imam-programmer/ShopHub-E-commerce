@@ -15,9 +15,9 @@ const Footer = () => {
             <p className="text-[16px] font-inter font-normal leading-6 text-[#9CA3AF] w-67.25 mb-4">
               Your one-stop shop for everything you need.
             </p>
-            <i class="fa-brands fa-facebook text-[#E5E7EB] mr-4"></i>
-            <i class="fa-brands fa-twitter text-[#E5E7EB] mr-4"></i>
-            <i class="fa-brands fa-instagram text-[#E5E7EB]"></i>
+            <i className="fa-brands fa-facebook text-[#E5E7EB] mr-4"></i>
+            <i className="fa-brands fa-twitter text-[#E5E7EB] mr-4"></i>
+            <i className="fa-brands fa-instagram text-[#E5E7EB]"></i>
           </div>
 
           <div>
@@ -25,8 +25,8 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="flex flex-col gap-2">
-              {footer1li.map((items) => (
-                <li className="font-inter text-[16px] font-light leading-6 text-[#9CA3AF]">
+              {footer1li.map((items,idx) => (
+                <li key={idx} className="font-inter text-[16px] font-light leading-6 text-[#9CA3AF]">
                   {items}
                 </li>
               ))}
@@ -38,8 +38,8 @@ const Footer = () => {
               Customer Service
             </h3>
             <ul className="flex flex-col gap-2">
-              {footer2li.map((items) => (
-                <li className="font-inter text-[16px] font-light leading-6 text-[#9CA3AF]">
+              {footer2li.map((items,idx) => (
+                <li key={idx} className="font-inter text-[16px] font-light leading-6 text-[#9CA3AF]">
                   {items}
                 </li>
               ))}
