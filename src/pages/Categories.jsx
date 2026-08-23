@@ -1,8 +1,10 @@
 import React from 'react'
-
+import CategoryBanner from "../components/categorypage/CategoryBanner"
 const Categories = () => {
   return (
-    <div>Categories</div>
+    <div>
+<CategoryBanner/>
+    </div>
   )
 }
 
