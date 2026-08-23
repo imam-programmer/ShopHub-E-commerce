@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "imam":"vite",
+    "imam": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -14,6 +14,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-router": "^8.3.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

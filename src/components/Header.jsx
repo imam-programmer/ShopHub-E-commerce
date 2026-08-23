@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router";
+import headerData from "../api/headerData.json"
 const Header = () => {
   return (
     <>
@@ -7,12 +8,20 @@ const Header = () => {
         <div className="container">
           <nav className="flex justify-between items-center h-16.25 flex-wrap md:flex-nowrap">
             <div className="flex items-center lg:gap-[31.52px] md:gap-6">
+              <Link to="/">
+              
             <img src="./image/logo.png" alt="" className="w-[80%] md:w-22.5 lg:w-full"/>
+              </Link>
             <ul className="md:flex hidden items-center lg:gap-[31.19px] md:gap-5">
-              <li className="nav-li">Home</li>
-              <li className="nav-li">Categories</li>
-              <li className="nav-li">About</li>
-              <li className="nav-li">Deals</li>
+           {
+            headerData.map((item)=>(
+              <Link key={item.id} to={item.path}>
+              <li className="nav-li">{item.name}</li>
+              
+              </Link>
+            ))
+           }
+       
             </ul>
             </div>
             <div className=" xl:w-lg relative w-[60%] xs:w-[70%] md:w-[40%]">

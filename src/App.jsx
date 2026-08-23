@@ -1,21 +1,28 @@
 import React from 'react'
-import Header from './components/Header'
-import Banner from './components/Banner'
-import Category from './components/Category'
-import Featured from './components/Featured'
-import Deal from './components/Deal'
-import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import Root from './root/Root';
+import Categories from './pages/Categories';
+import About from './pages/About';
+import Deals from './pages/Deals';
 
 const App = () => {
+  const router=createBrowserRouter([
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      { index: true, Component: HomePage },
+      { path: "categories", Component: Categories },
+      { path: "about", Component: About },
+      { path: "deals", Component: Deals }
+ 
+    ],
+  },
+]);
+
   return (
-    <>
-   <Header/>
-   <Banner/>
-   <Category/>
-   <Featured/>
-   <Deal/>
-   <Footer/>
-    </>
+<RouterProvider router={router}></RouterProvider>
   )
 }
 
