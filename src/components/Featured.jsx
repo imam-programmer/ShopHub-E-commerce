@@ -14,7 +14,7 @@ let data=fetch('https://dummyjson.com/products')
 
   
   return (
-    <section className='md:pt-16 pt-5 mt-5 md:mt-0  pb-5 md:pb-0  bg-[rgba(229,231,235,.3)]'>
+    <section className='md:pt-16 pt-5  mt-5 md:mt-0  pb-10  bg-[rgba(229,231,235,.3)]'>
         <div className="container">
             <div className='flex justify-between mb-8'>
            <h2 className='md:text-[30px] text-xl font-inter font-bold leading-9 text-[#111827]'>Featured Products</h2>
