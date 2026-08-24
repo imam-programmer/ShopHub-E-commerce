@@ -87,3 +87,27 @@
     margin-bottom:6px;
     font-family:"Inter", sans-serif;
 }
+
+select.modern-select,
+select.modern-select::picker(select) {
+  appearance: base-select;
+ 
+}
+select.modern-select::picker(select) {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+select.modern-select option {
+  padding: 5px;
+  border-radius: 6px;
+  color: #1e293b;
+  cursor: pointer;
+}
+
+select.modern-select option:checked {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
