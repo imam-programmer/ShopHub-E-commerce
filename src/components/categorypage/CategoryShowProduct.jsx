@@ -3,20 +3,32 @@ import React, { useEffect, useState } from 'react'
 import { IoSearchSharp, IoFilter } from "react-icons/io5";
 import CategoryShowProductTop from './CategoryShowProductTop';
 import Featubox from '../Featubox';
+import ResponsivePagination from 'react-responsive-pagination';
+import 'react-responsive-pagination/themes/classic-light-dark.css';
 
 const CategoryShowProduct = () => {
   const [Products, setProducts] = useState([])
   const [loading, setloading] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, settotalpages] = useState(9)
   useEffect(() => {
-axios.get("https://dummyjson.com/products?limit=200").then((res=>{
+axios.get("https://dummyjson.com/products?limit=80").then((res=>{
   setProducts(res.data.products)
+  settotalpages(Math.ceil(res.data.products.length / 9))
   setloading(false)
 }
 )).catch((err)=>{
   console.log(err)
 setloading(false)})
   }, [])
-  console.log(Products)
+
+
+// pagination slice index create here===================
+let firstIdx=(currentPage-1) * 9;
+let lastIdx=firstIdx + 9
+
+
+
   if(loading){
     return(
       <div className='w-full grid grid-cols-3 gap-5 mb-10'>
@@ -54,15 +66,21 @@ setloading(false)})
 
 <div className='grid grid-cols-3 gap-5 mt-5'>
     {
-      Products.map((item)=>(
+      Products.slice(firstIdx,lastIdx).map((item)=>(
         <Featubox key={item.id} id={item.id} title={item.title} img={item.thumbnail} p={item.description} price={item.price}/>
       ))
     }
 
 </div>
+<div className='mt-10'>
 
+  <ResponsivePagination
+      current={currentPage}
+      total={totalPages}
+      onPageChange={setCurrentPage}
+    />
+</div>
 
-      {/* =========product show part start====== */}
     </div>
   )
 }
