@@ -26,12 +26,12 @@ const Banner = () => {
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-              loop={true} className="mySwiper w-100 rounded-2xl">
+              loop={true} className="mySwiper w-70 xs:w-100 rounded-2xl">
               {
                 bannerImageData.map((item) => (
 
                   <SwiperSlide>
-                    <img className='w-100 h-80 ' src={item.image} alt="" loading='lazy' />
+                    <img className='w-full h-70 xs:h-80 ' src={item.image} alt="" loading='lazy' />
                   </SwiperSlide>
                 ))
               }

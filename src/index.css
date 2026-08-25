@@ -27,16 +27,21 @@
 
 @theme {
   --shadow-box: 0 0px 2px rgba(0,0,0,0.1); 
+
+  --breakpoint-xs: 370px;
+
 }
 
 /* ===============responsive start============== */
 /* ================header start================== */
-#baricon:checked~ul{
-    left: 0;
-    transition: 0.5s;
+
+.navitemhidd{
+left:0;
+transition:0.3s all
 }
-.ul{
-    transition:0.5s
+.navitemshow{
+left:-120%;
+transition:0.3s all
 }
 /* ===============header end======================== */
 
