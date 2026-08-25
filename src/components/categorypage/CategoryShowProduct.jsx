@@ -5,15 +5,19 @@ import CategoryShowProductTop from './CategoryShowProductTop';
 import Featubox from '../Featubox';
 import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/classic-light-dark.css';
+import { useDispatch } from 'react-redux';
+import { StoreAllProduct } from '../../features/product/productSlice';
 
 const CategoryShowProduct = () => {
   const [Products, setProducts] = useState([])
   const [loading, setloading] = useState(true)
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, settotalpages] = useState(9)
+  const dispatch=useDispatch()
   useEffect(() => {
 axios.get("https://dummyjson.com/products?limit=80").then((res=>{
   setProducts(res.data.products)
+  dispatch(StoreAllProduct(res.data.products))
   settotalpages(Math.ceil(res.data.products.length / 9))
   setloading(false)
 }
