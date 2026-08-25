@@ -1,6 +1,9 @@
 import React from 'react'
 import { IoSearchSharp, IoFilter } from "react-icons/io5";
+import { useSelector } from 'react-redux';
 const CategoryShowProductTop = () => {
+
+
   return (
     <div>
           <div className='flex justify-between '>

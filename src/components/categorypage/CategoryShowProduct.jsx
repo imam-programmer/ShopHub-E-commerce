@@ -5,26 +5,30 @@ import CategoryShowProductTop from './CategoryShowProductTop';
 import Featubox from '../Featubox';
 import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/classic-light-dark.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { StoreAllProduct } from '../../features/product/productSlice';
 
-const CategoryShowProduct = () => {
+const CategoryShowProduct = ({currentPage,setCurrentPage}) => {
+  
   const [Products, setProducts] = useState([])
   const [loading, setloading] = useState(true)
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, settotalpages] = useState(9)
   const dispatch=useDispatch()
+   const FilterByCategory=useSelector((state)=>state.product.FilTerProduct)
+
+  // console.log(FilterByCategory)
   useEffect(() => {
 axios.get("https://dummyjson.com/products?limit=80").then((res=>{
   setProducts(res.data.products)
   dispatch(StoreAllProduct(res.data.products))
-  settotalpages(Math.ceil(res.data.products.length / 9))
+  settotalpages(FilterByCategory.length>0?Math.ceil(FilterByCategory.length / 9):Math.ceil(res.data.products.length / 9))
   setloading(false)
 }
 )).catch((err)=>{
   console.log(err)
 setloading(false)})
-  }, [])
+  }, [FilterByCategory])
 
 
 // pagination slice index create here===================
@@ -37,8 +41,8 @@ let lastIdx=firstIdx + 9
     return(
       <div className='w-full grid grid-cols-3 gap-5 mb-10'>
 
-       { Array.from({length:9},()=>(
-          <div className="mx-auto w-full h-70 max-w-sm rounded-md border-3 border-[#bebebe56] p-4">
+       { Array.from({length:9},(item,idx)=>(
+          <div key={idx} className="mx-auto w-full h-70 max-w-sm rounded-md border-3 border-[#bebebe56] p-4">
     <div className=" animate-pulse ">
       <div className="h-40 rounded-2xl bg-gray-300 mb-4" />
       <div className="flex-1 space-y-6 ">
@@ -69,7 +73,10 @@ let lastIdx=firstIdx + 9
     <CategoryShowProductTop/>
 
 <div className='grid grid-cols-3 gap-5 mt-5'>
-    {
+    {FilterByCategory.length>0?
+      FilterByCategory.slice(firstIdx,lastIdx).map((item)=>(
+        <Featubox key={item.id} id={item.id} title={item.title} img={item.thumbnail} p={item.description} price={item.price}/>
+      )):
       Products.slice(firstIdx,lastIdx).map((item)=>(
         <Featubox key={item.id} id={item.id} title={item.title} img={item.thumbnail} p={item.description} price={item.price}/>
       ))

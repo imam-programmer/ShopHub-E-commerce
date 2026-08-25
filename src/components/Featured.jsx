@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Featubox from './Featubox'
+import { useSelector } from 'react-redux'
 
 const Featured = () => {
   const [ViewAll, setViewAll] = useState(false)
   const [products, setProducts] = useState([])
+  let Products=useSelector((state)=>state.product.products)
   useEffect(() => {
-let data=fetch('https://dummyjson.com/products')
-.then(res => res.json())
-.then((data)=>{
-  setProducts(data.products)
-});
+    console.log(Products)
+    setProducts(Products)
+
   }, [])
 
 function handleViewAll(){
