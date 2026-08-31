@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import Featubox from './Featubox'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 const Featured = () => {
   const [ViewAll, setViewAll] = useState(false)
   const [products, setProducts] = useState([])
-  let Products=useSelector((state)=>state.product.products)
-  useEffect(() => {
-    console.log(Products)
-    setProducts(Products)
-
+ useEffect(() => {
+axios.get("https://dummyjson.com/products").then((res=>{
+  setProducts(res.data.products)
+}
+)).catch((err)=>{
+  console.log(err)
+})
   }, [])
 
 function handleViewAll(){
